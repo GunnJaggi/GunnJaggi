@@ -1,10 +1,9 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio - Economics & Finance Graduate</title>
+    <title>Portfolio - Gunn Jaggi</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -125,11 +124,32 @@
         .hero {
             padding: 4rem 0 6rem;
             animation: fadeIn 1s ease-out 0.2s both;
+            display: grid;
+            grid-template-columns: 1fr 400px;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .hero-content {
+            max-width: 600px;
+        }
+
+        .hero-image {
+            width: 100%;
+            height: auto;
+            border-radius: 12px;
+            box-shadow: 0 8px 32px rgba(52, 152, 219, 0.15);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .hero-image:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 40px rgba(52, 152, 219, 0.25);
         }
 
         .hero-title {
             font-family: 'Playfair Display', serif;
-            font-size: 4rem;
+            font-size: 3.5rem;
             font-weight: 600;
             line-height: 1.2;
             margin-bottom: 1.5rem;
@@ -144,18 +164,11 @@
             margin-top: 0.5rem;
         }
 
-        .hero-subtitle {
-            font-size: 1.3rem;
-            color: var(--color-muted);
-            margin-bottom: 2rem;
-            font-weight: 400;
-        }
-
         .hero-description {
-            font-size: 1.1rem;
-            max-width: 600px;
+            font-size: 1.05rem;
             line-height: 1.8;
-            margin-bottom: 3rem;
+            margin-bottom: 1.5rem;
+            color: var(--color-text);
         }
 
         /* Section Styling */
@@ -236,19 +249,22 @@
             line-height: 1.7;
         }
 
-        .experience-description ul {
+        .experience-description ul,
+        ul.experience-description {
             list-style: none;
             padding-left: 0;
         }
 
-        .experience-description li {
+        .experience-description li,
+        ul.experience-description li {
             padding-left: 1.5rem;
             margin-bottom: 0.6rem;
             position: relative;
         }
 
-        .experience-description li::before {
-            content: '$';
+        .experience-description li::before,
+        ul.experience-description li::before {
+            content: '¥';
             position: absolute;
             left: 0;
             color: var(--color-accent);
@@ -368,8 +384,19 @@
                 text-align: center;
             }
 
+            .hero {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .hero-image {
+                order: -1;
+                max-width: 300px;
+                margin: 0 auto;
+            }
+
             .hero-title {
-                font-size: 3rem;
+                font-size: 2.5rem;
             }
 
             .section-title {
@@ -389,7 +416,7 @@
 <body>
     <div class="container">
         <nav>
-            <a href="index.html" class="logo">Portfolio</a>
+            <a href="index.html" class="logo">Gunn Jaggi</a>
             <ul class="nav-links">
                 <li><a href="#about">About</a></li>
                 <li><a href="#experience">Experience</a></li>
@@ -400,14 +427,29 @@
         </nav>
 
         <section class="hero">
-            <h1 class="hero-title">Economics & Finance Graduate<strong>CFA Level 1 Candidate</strong></h1>
-            <p class="hero-subtitle">University of Exeter | BSc Economics and Finance (2:1)</p>
-            <p class="hero-description">
-                Motivated, analytical, and detail-oriented finance professional with hands-on experience in 
-                financial analysis, statutory reporting, and data-driven decision-making. Passionate about 
-                leveraging technology and analytical skills to solve complex financial challenges.
-            </p>
-            <a href="/cfa-tools/" class="cta-button">View CFA Tools →</a>
+            <div class="hero-content">
+                <h1 class="hero-title">Hello & Welcome</h1>
+                <p class="hero-description">
+                    I'm Gunn Jaggi, an Economics and Finance graduate from the University of Exeter. 
+                    When I was 17, I moved from India to the UK to pursue my undergraduate studies. 
+                    Now, as a 21-year-old recent graduate, if there's one thing I'd tell my younger 
+                    self, it's to stop worrying so much. Life is all about the journey, not just the 
+                    destination — and the detours, challenges, and unexpected moments often teach you 
+                    more than the milestones themselves.
+                </p>
+                <p class="hero-description">
+                    I'm passionate about learning — particularly in data analysis, finance, and building 
+                    tools that make complex concepts more accessible. Currently, I'm exploring different 
+                    career paths in finance while deepening my knowledge through hands-on projects, CFA 
+                    preparation, and continuous self-improvement. I believe growth comes from doing, 
+                    reflecting, and improving — whether that's analyzing markets, developing calculators, 
+                    or learning from setbacks.
+                </p>
+                <a href="/cfa-tools/" class="cta-button">View CFA Tools →</a>
+            </div>
+            <div>
+                <img src="images/headshot.png.jpeg" alt="Gunn Jaggi" class="hero-image">
+            </div>
         </section>
 
         <section id="experience">
