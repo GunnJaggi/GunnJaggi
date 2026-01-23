@@ -175,6 +175,7 @@
             line-height: 1.8;
             margin-bottom: 1.5rem;
             color: var(--color-text);
+            text-align: justify;
         }
 
         /* Section Styling */
@@ -283,6 +284,27 @@
             font-weight: 600;
         }
 
+        /* Back to Top Link */
+        .back-to-top {
+            display: inline-block;
+            margin-top: 2rem;
+            color: var(--color-accent);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.95rem;
+            transition: all 0.3s ease;
+        }
+
+        .back-to-top:hover {
+            color: var(--color-accent-dark);
+            transform: translateY(-2px);
+        }
+
+        .back-to-top::before {
+            content: '↑ ';
+            font-size: 1.1rem;
+        }
+
         /* Skills */
         .skills-grid {
             display: grid;
@@ -335,24 +357,6 @@
             border-top: 1px solid var(--color-border);
             color: var(--color-muted);
             margin-top: 6rem;
-        }
-
-        .social-links {
-            display: flex;
-            justify-content: center;
-            gap: 2rem;
-            margin-bottom: 1.5rem;
-        }
-
-        .social-links a {
-            color: var(--color-text);
-            text-decoration: none;
-            font-weight: 500;
-            transition: color 0.3s ease;
-        }
-
-        .social-links a:hover {
-            color: var(--color-accent);
         }
 
         /* Animations */
@@ -419,7 +423,7 @@
         }
     </style>
 </head>
-<body>
+<body id="top">
     <div class="container">
         <nav>
             <a href="index.html" class="logo">Gunn Jaggi</a>
@@ -434,21 +438,21 @@
 
         <section class="hero">
             <div class="hero-content">
-                <h1 class="hero-title">Hello & Welcome</h1>
+                <h2 class="hero-title">Hello & Welcome</h2>
                 <p class="hero-description">
-                    I'm Gunn Jaggi, an Economics and Finance graduate from the University of Exeter. 
+                    My name is Gunn Jaggi, I am an Economics and Finance graduate from the University of Exeter. 
                     When I was 17, I moved from India to the UK to pursue my undergraduate studies. 
-                    Now, as a 21-year-old recent graduate, if there's one thing I'd tell my younger 
-                    self, it's to stop worrying so much. Life is all about the journey, not just the 
-                    destination — and the detours, challenges, and unexpected moments often teach you 
+                    Now, as a 21-year-old recent graduate, if there is one thing I would tell my younger 
+                    self, it would be to stop worrying so much. Life is all about the journey, not just the 
+                    destination; and the detours, challenges, and unexpected moments often teach you 
                     more than the milestones themselves.
                 </p>
                 <p class="hero-description">
-                    I'm passionate about learning — particularly in data analysis, finance, and building 
-                    tools that make complex concepts more accessible. Currently, I'm exploring different 
+                    I am passionate about learning, particularly in data analysis, finance, and building 
+                    tools that make complex concepts more accessible. Currently, I am exploring different 
                     career paths in finance while deepening my knowledge through hands-on projects, CFA 
                     preparation, and continuous self-improvement. I believe growth comes from doing, 
-                    reflecting, and improving — whether that's analyzing markets, developing calculators, 
+                    reflecting, and improving, whether that's analyzing markets, developing calculators, 
                     or learning from setbacks.
                 </p>
                 <a href="/cfa-tools/" class="cta-button">View CFA Tools →</a>
@@ -458,6 +462,8 @@
                 <img src="images/headshot2.jpeg" alt="Gunn Jaggi" class="hero-image">
             </div>
         </section>
+
+        <a href="#top" class="back-to-top">Back to Top</a>
 
         <section id="experience">
             <h2 class="section-title">Work Experience</h2>
@@ -507,6 +513,8 @@
             </div>
         </section>
 
+        <a href="#top" class="back-to-top">Back to Top</a>
+
         <section id="education">
             <h2 class="section-title">Education & Qualifications</h2>
             
@@ -553,6 +561,8 @@
             </div>
         </section>
 
+        <a href="#top" class="back-to-top">Back to Top</a>
+
         <section id="skills">
             <h2 class="section-title">Skills & Expertise</h2>
             <div class="skills-grid">
@@ -570,6 +580,8 @@
                 <div class="skill-tag">MS Office</div>
             </div>
         </section>
+
+        <a href="#top" class="back-to-top">Back to Top</a>
 
         <section>
             <h2 class="section-title">Leadership & Involvement</h2>
@@ -603,10 +615,6 @@
             </div>
         </section>
 
+        <a href="#top" class="back-to-top">Back to Top</a>
+
         <footer>
-            <div class="social-links">
-                <a href="https://github.com/yourusername" target="_blank">GitHub</a>
-                <a href="https://linkedin.com/in/yourprofile" target="_blank">LinkedIn</a>
-                <a href="/cdn-cgi/l/email-protection#fa83958f88d49f979b9396ba9f829b978a969fd4999597">Email</a>
-            </div>
-            <p>&copy; 2025 All rights reserved.</p>
